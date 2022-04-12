@@ -16,19 +16,19 @@ class ModelGeneration:
         # Layer 3: Conv 2D
         model.add(keras.layers.Conv2D(64, (5, 5), padding='same'))
 
-        # Layer 3: Max Pool
+        # Layer 4: Max Pool
         model.add(keras.layers.MaxPool2D((2, 2)))
 
-        # Layer 3: Flatten for Nodes
+        # Layer 5: Flatten for Nodes
         model.add(keras.layers.Flatten())
 
-        # Layer 3: Dense Layers
+        # Layer 6: Dense Layers
         model.add(keras.layers.Dense(1024, activation='relu'))
 
-        # Layer 3: Dropout
+        # Layer 7: Dropout
         model.add(keras.layers.Dropout(0.2))
 
-        # Layer 3: Output Layer
+        # Layer 8: Output Layer
         model.add(keras.layers.Dense(10, activation='softmax'))
 
         self.model = model
